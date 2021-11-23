@@ -10,14 +10,14 @@ class App extends Component {
     data: [],
     visited: [],
     searchInput: "",
-    isLoading: true
+    isLoading: false
   }
 
   componentDidMount() {
     // https://restcountries.com/v3.1/all will fetch all data
     // but we can specify fields we are interested in:
     axios.get("https://restcountries.com/v3.1/all?fields=name,flags,languages,capital,population,currencies").then((res) => {
-      this.setState({ data: res.data, isloading: false});
+      this.setState({ data: res.data, isloading: true});
       console.log(this.state.data);
     })
   }

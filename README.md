@@ -4,7 +4,7 @@ An application to fetch information from the open API https://restcountries.com/
 
 
 ## Usage:
-Search for a counrty by typing in the input field. A list of matcihng countries and their informations is shown.
+Search for a country by typing in the input field. A list of matching countries and their informations is shown. A matching country is fetched by country name, any country name that CONTAINS the input string is a match.
 
 
 ## Concepts practised:
@@ -21,6 +21,8 @@ Search for a counrty by typing in the input field. A list of matcihng countries 
 
 
 ![screenshot](screenshot.png?raw=true "Screenshot of the single page application")
+
+![screenshot](screenshot2.png?raw=true "Screenshot of the single page application")
 
 ## Credits:
 - Rest Countries API: https://restcountries.com/
