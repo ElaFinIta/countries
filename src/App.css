@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Julius+Sans+One&display=swap');
 
 * {
   margin: 0;
@@ -7,11 +7,16 @@
 }
  :root {
   --special-font: 'Julius Sans One', sans-serif;
+  --normal-font: 'Crimson Pro', serif;
+ }
+
+ h1, h2, label, input, .languages li {
+   font-family: var(--special-font);
  }
 
  body {
   margin: 0;
-  font-family: var(--special-font);
+  font-family: var(--normal-font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -26,13 +31,18 @@
 
 .App-header {
   background-color: #e8ecf5;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: black;
+}
+
+.loader_wrapper,
+body {
+  background-color: #e8ecf5;
 }
 
 input {
@@ -47,7 +57,7 @@ input {
   align-items: center;
 }
 
-.card_wrapper {
+.countriesList {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -63,23 +73,20 @@ input {
   box-shadow: 2px 2px 2px grey;
 }
 
+.languages,
+.currencies,
+.capital {
+  margin-top: 0.6rem;
+}
+
 ul {
   list-style: none;
   font-size: 1rem;
 }
 
-.new_title li::before {
-  content: '';
-  display: inline-block;
-  height: 20px;
-  width: 20px;
-  position: relative;
-  background-image: url('assets/lang.svg');
-  background-size: cover;
-}
-
 li {
   padding-left: 1rem;
+  font-size: 0.9rem;
 }
 
 svg {
@@ -98,24 +105,14 @@ img {
 }
 
 
-.new_title {
-  margin-top: 0.9rem;
-}
-
 h2 {
   margin-top: 1rem;
   font-size: 1.5rem;
-  font-family: var(--special-font);
-}
-
-
-li {
-  font-size: 0.9rem;
 }
 
 p {
   font-size: 1rem;
-  margin: 0.3rem;
+  margin: 0.1rem;
 }
 
 h3 {
@@ -127,12 +124,28 @@ h3 {
   font-weight: bold;
 }
 
-.currency li::before {
+
+/* list bulleting symbols  */
+.languages li::before {
   content: '';
   display: inline-block;
   height: 20px;
   width: 20px;
   position: relative;
+  left: -0.3rem;
+  top: 0.2rem;
+  background-image: url('assets/lang.svg');
+  background-size: cover;
+}
+
+/* list bulleting symbols  */
+.currencies li::before {
+  content: '';
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  position: relative;
+  top: 0.4rem;
   background-image: url('assets/money.svg');
   background-size: cover;
 }
