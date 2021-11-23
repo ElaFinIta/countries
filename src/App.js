@@ -2,13 +2,17 @@ import './App.css';
 import axios from "axios";
 import React, { Component } from 'react';
 
+const number = require('easy-number-formatter')
+
 class App extends Component {
   state = {
     data: [],
   }
 
   componentDidMount() {
-    axios.get("https://restcountries.com/v3.1/all").then((res) => {
+    // https://restcountries.com/v3.1/all will fetch all data
+    // but we can specify fields we are interested in:
+    axios.get("https://restcountries.com/v3.1/all?fields=name,flags,languages,capital,population").then((res) => {
       this.setState({ data: res.data});
       console.log(this.state.data);
     })
@@ -33,12 +37,15 @@ class App extends Component {
 
               <p className="lang_title"> Official languages: </p>
                 {/* languages is an object. To be able to loop, make an array out of an object with Object.entries(yourObject).
-              It breaks if there's no object for languages (example: Antarctica) >>> check if item.language exists */}
+              It breaks if there's no object for languages (example: Antarctica) >>> check if item.language exists.
+              Alternatively, ise v2 where languages are in an array. You can also fetch only part of data:
+              https://restcountries.com/v2/all?fields=name,capital,currencies
+ */}
                 {item.languages ? Object.entries(item.languages).map(([code, lang]) => {
                 return (<li key={code}>{lang}</li>)
               }) : "unknown"}
               <p>Capital: {item.capital}</p>
-              <p>Population: {item.population}</p>
+              <p>Population: {number.formatNumber(item.population)}</p>
             </div>
           ))}
         </div>

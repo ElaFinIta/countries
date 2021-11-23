@@ -1,6 +1,6 @@
 # Single page application (SPA) fetching information from API
 
-An application to fetch information from an API. 
+An application to fetch information from the open API https://restcountries.com/
 
 
 ## Usage:
