@@ -16,6 +16,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.loader_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
 .App-header {
   background-color: #e8ecf5;
   min-height: 100vh;
@@ -25,6 +33,18 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: black;
+}
+
+input {
+  margin: 1rem;
+  padding: 0.4rem;
+  font-family: var(--special-font);
+}
+
+.input_label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .card_wrapper {
