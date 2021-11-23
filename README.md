@@ -21,3 +21,7 @@ Search for a counrty by typing in the input field. A list of matcihng countries 
 
 
 ![screenshot](screenshot.png?raw=true "Screenshot of the single page application")
+
+## Credits:
+- Rest Countries API: https://restcountries.com/
+- money svg: author: https://videoplasty.com/ licence: https://creativecommons.org/licenses/by-sa/4.0/

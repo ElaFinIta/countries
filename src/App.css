@@ -43,6 +43,29 @@
   box-shadow: 2px 2px 2px grey;
 }
 
+ul {
+  list-style: none;
+  font-size: 1rem;
+}
+
+.new_title li::before {
+  content: '';
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  position: relative;
+  background-image: url('assets/lang.svg');
+  background-size: cover;
+}
+
+li {
+  padding-left: 1rem;
+}
+
+svg {
+  font-size: 1rem;
+}
+
 img {
   position: absolute;
   top: -1rem;
@@ -52,6 +75,11 @@ img {
   border: 1px solid black;
   background-size: cover;
   box-shadow: 1px 2px 1px grey;
+}
+
+
+.new_title {
+  margin-top: 0.9rem;
 }
 
 h2 {
@@ -73,4 +101,18 @@ p {
 h3 {
   font-size: 1rem;
   font-family: var(--special-font);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.currency li::before {
+  content: '';
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  position: relative;
+  background-image: url('assets/money.svg');
+  background-size: cover;
 }
