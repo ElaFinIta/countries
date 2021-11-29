@@ -20,9 +20,9 @@ Search for a country by typing in the input field. A list of matching countries 
 ## Screenshot:
 
 
-![screenshot](screenshot.png?raw=true "Screenshot of the single page application")
+![screenshot](Screenshot.png?raw=true "Screenshot of the single page application")
 
-![screenshot2](screenshot2.png?raw=true "Second screenshot of the single page application")
+![screenshot](Screenshot2.png?raw=true "Second screenshot of the single page application")
 
 ## Credits:
 - Rest Countries API: https://restcountries.com/
