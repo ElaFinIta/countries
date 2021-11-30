@@ -14,7 +14,12 @@
    font-family: var(--special-font);
  }
 
- body {
+.App-header h1,
+label {
+  color: whitesmoke;
+}
+
+body {
   margin: 0;
   font-family: var(--normal-font);
   -webkit-font-smoothing: antialiased;
@@ -30,7 +35,6 @@
 }
 
 .App-header {
-  background-color: #e8ecf5;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
@@ -42,7 +46,7 @@
 
 .loader_wrapper,
 body {
-  background-color: #e8ecf5;
+  background-color: #3c788e;
 }
 
 nav ul {
@@ -54,6 +58,24 @@ nav ul {
 nav li a {
   font-size: 1.5rem;
 }
+
+
+/***  Home  and About ****/
+.home,
+.about {
+  color: whitesmoke;
+  margin: 3rem;
+  font-family: var(--special-font);
+}
+
+.home p,
+.home a,
+.about p,
+.about a {
+  font-size: 1.6rem;
+}
+
+/***  end Home and About ****/
 
 .countriesList a {
   text-decoration: none;
@@ -83,9 +105,15 @@ input {
   margin: 1rem 0.6rem;
   padding: 1rem;
   width: 20vw;
+  min-width: 12rem;
   border: 1px solid black;
   border-radius: 2px;
-  box-shadow: 2px 2px 2px grey;
+  box-shadow: 2px 2px 2px #285667;
+  background-color: whitesmoke;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 5px #18323c;
 }
 
 .languages,
@@ -132,6 +160,7 @@ p {
 
 h3,
 a {
+  color: whitesmoke;
   font-size: 1rem;
   font-family: var(--special-font);
 }
@@ -171,7 +200,45 @@ a {
   background-size: cover;
 }
 
-/****** CounrtySingle ******/
+/****** CountrySingle ******/
 .singleCountry {
-  
+  display: flex;
+  justify-content: center;
+}
+
+.singleCountryBox {
+  padding: 3rem;
+  font-size: 1.5rem;
+  font-family: var(--special-font);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.singleCountryBox p,
+.singleCountryBox h1 {
+  padding: 0.3rem;
+}
+
+.singleCountryBox span {
+  font-weight: bold;
+}
+
+.singleCountryBox p:nth-child(3),
+.singleCountryBox > span {
+  color: whitesmoke;
+}
+
+.singleCountryBox img {
+  position: relative;
+  left: -0.5rem;
+  top: -0.3rem;
+  box-shadow: none;
+  border: none;
+  width: 9rem;
+}
+
+.singleCountryBox h1 {
+  font-size: 1.6rem;
 }
