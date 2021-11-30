@@ -17,6 +17,9 @@ class CountriesList extends Component {
         // but we can specify fields we are interested in:
         axios.get("https://restcountries.com/v3.1/all?fields=name,flags,languages,capital,population,currencies").then((res) => {
           this.setState({ data: res.data, isloading: true});
+
+        // search by name: https://restcountries.com/v3.1/name/{name}
+        // https://restcountries.com/v3.1/name/peru
         //   console.log(this.state.data);
         })
     }
@@ -45,11 +48,19 @@ class CountriesList extends Component {
     if (!this.state.isLoading) {
         // matching input with countries name in data
         let foundCountries = this.state.data.filter((countryObj) => {
-                return countryObj.name.common.toLowerCase().includes(this.state.searchInput.toLowerCase());     
+                return countryObj.name.common.toLowerCase().includes(this.state.searchInput.toLowerCase());
         });
 
+        // in countryObject we have:
+        // countryObject.name.common
+        // countryObject.capital
+        // countryObject.population
+        // countryObject.flags.svg
+        // we can destructure it with spread operator and pass it all; but because I take properties at differen levels, I guess I can't spread it...
+        // it would be (counrtyObject)  and then  <CountryCard {...countryObject}
+        // try to create first the languages array
         const countriesListing = foundCountries.map((countryObject) => (
-            <CountryCard
+            <CountryCard 
                 key={countryObject.name.common}
                 name={countryObject.name.common}
                 capital={countryObject.capital}
