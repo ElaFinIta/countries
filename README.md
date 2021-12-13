@@ -32,3 +32,4 @@ Search for a country by typing in the input field. A list of matching countries 
 - Rest Countries API: https://restcountries.com/ V3 used in CountriesList to search for countries and populate Countries with cards. V2 (arrays) is used in CountrySingle to get the country object and specifically capital.
 - OpenWeather API: https://openweathermap.org/api
 - money svg: author: https://videoplasty.com/ licence: https://creativecommons.org/licenses/by-sa/4.0/
+- map https://www.mapsof.net/the-world/blank-map-world-reversed

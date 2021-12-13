@@ -52,7 +52,7 @@ body {
 nav ul {
   padding: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 nav li a {
@@ -61,11 +61,31 @@ nav li a {
 
 
 /***  Home  and About ****/
-.home,
+
+.home {
+  background-image: url('./assets/blank_map_world_reversed.png');
+  background-color: whitesmoke;
+  height: 100vh;
+  margin: 0;
+  width: 100vw;
+}
+
+.home p,
+.home a {
+  color: black;
+}
+
+.about p {
+  position: relative;
+  right: -24rem;
+}
+
+
 .about {
   color: whitesmoke;
   margin: 3rem;
   font-family: var(--special-font);
+  width: 32rem;
 }
 
 .home p,
